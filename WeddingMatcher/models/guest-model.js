@@ -41,9 +41,9 @@ const guestSchema = new Schema({
     timestamps: true
 });
 
-userSchema.virtual("isAdmin").get(function() {
-    return this.role === "admin" && this.createdWeddings === "?";
-});
+// userSchema.virtual("isAdmin").get(function() {
+//     return this.role === "admin" && this.createdWeddings === "?";
+// });
 
 
 const Guest = mongoose.model("Guest", guestSchema);
