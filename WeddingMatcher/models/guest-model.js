@@ -8,7 +8,7 @@ const guestSchema = new Schema({
     firstName: { type: String, required: true },
     description: { type: String },
     pictureURL: { type: String },
-    email: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
     birthday: { type: Date },
     encryptedPassword: { type: String },
     gender: { type: String, required: true },

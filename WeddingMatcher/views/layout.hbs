@@ -10,11 +10,19 @@
 <body>
 
   <header>
+
+{{#each messages}}
+<div class="{{@key}}-message">
+    {{this}}
+</div>
+{{/each}}
     <nav>
       <a href="/">Home</a>
       <a href="/signup">Sign Up</a>
       <a href="/login">Login</a>
     </nav>
+
+
   </header>
 
   {{{body}}}

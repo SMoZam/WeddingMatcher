@@ -1,0 +1,21 @@
+<h2>Log In</h2>
+
+
+
+{{#each messages}}
+<div class="{{@key}}-message">
+    {{this}}
+</div>
+{{/each}}
+
+<form action="/process-login" method="POST">
+
+
+    <input type="email" name="email" placeholder="Your email">
+    <br>
+
+    <input type="password" name="originalPassword" placeholder="Your password">
+    <br>
+
+    <button>Submit</button>
+</form>
