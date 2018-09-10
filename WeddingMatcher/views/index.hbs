@@ -10,12 +10,12 @@
         <h2>Create an account</h2>
         <p>It's free and fast</p>
 
-        <form action="" method="">
-            <input type="text" name="firstname" placeholder="First Name">
-            <input type="text" name="lastname" placeholder="Last Name">
+        <form action="/process-signup" method="POST">
+            <input type="text" name="firstName" placeholder="First Name">
+            <input type="text" name="lastName" placeholder="Last Name">
             <br>
 
-            <input type="date" name="anniversaire">
+            <input type="date" name="birthday">
             <br>
             
             <div>
@@ -36,7 +36,7 @@
             <input type="email" name="email" placeholder="Your email">
             <br>
 
-            <input type="password" name="password" placeholder="Your password">
+            <input type="password" name="originalPassword" placeholder="Your password">
             <br>
 
             <button>Submit</button>

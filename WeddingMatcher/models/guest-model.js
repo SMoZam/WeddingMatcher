@@ -4,9 +4,14 @@ const Schema = mongoose.Schema;
 
 const guestSchema = new Schema({
 
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    pictureURL: { type: String, required: true },
+    firstName: { type: String, required: true },
+    firstName: { type: String, required: true },
+    description: { type: String },
+    pictureURL: { type: String },
+    email: { type: String, required: true },
+    birthday: { type: Date },
+    encryptedPassword: { type: String },
+    gender: { type: String, required: true },
     messages: [{
         type: Schema.Types.ObjectId,
         ref: "Message",
