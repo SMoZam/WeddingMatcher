@@ -9,14 +9,18 @@
 </head>
 <body>
 
+  <section id="top-menu">
+
+    {{#each messages}}
+    <div class="{{@key}}-message">
+        {{this}}
+    </div>
+    {{/each}}
+
+  </section>
+
   <header>
 
-
-{{#each messages}}
-<div class="{{@key}}-message">
-    {{this}}
-</div>
-{{/each}}
     <div>
       <img src="" alt="">
       <h1>WEDDING MATCHER</h1>
@@ -25,9 +29,18 @@
 
     <nav>
       <a href="/">Home</a>
-      <a href="/login">Login</a>
-    </nav>
 
+      {{!-- {{#if currentUser}} --}}
+        
+        <a href="/logout">Log Out</a>
+        <a href="#">Settings</a>
+
+      {{!-- {{else}} --}}
+        <a href="/login">Log In</a>
+      {{!-- {{/if}} --}}
+      
+    </nav>
+<h3>{{currentUser.email}} </h3>
   </header>
 
   {{{body}}}

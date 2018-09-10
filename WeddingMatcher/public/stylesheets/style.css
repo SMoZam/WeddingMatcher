@@ -5,6 +5,9 @@ body {
 a {
   color: #00B7FF; }
 
+#top-menu {
+  text-align: center; }
+
 header {
   display: flex;
   justify-content: space-between;

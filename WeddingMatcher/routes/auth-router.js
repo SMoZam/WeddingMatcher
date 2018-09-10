@@ -1,12 +1,10 @@
 const express = require('express');
-
-const router = express.Router();
-
 const bcrypt = require("bcrypt");
+const passport = require("passport");
 
 const Guest = require("../models/guest-model.js")
 
-// const passport = require("passport");
+const router = express.Router();
 
 
 
@@ -23,7 +21,10 @@ router.post("/process-signup", (req, res, next) => {
         .catch(err => next(err))
 
 })
+router.get("/login", (req, res, next) => {
 
+    res.render("auth-views/login-form.hbs")
+})
 
 router.post("/process-login", (req, res, next) => {
 
@@ -41,19 +42,31 @@ router.post("/process-login", (req, res, next) => {
 
             if (!bcrypt.compareSync(originalPassword, encryptedPassword)) {
                 req.flash("error", "Wrong password");
-                res.redirect("login");
+                res.redirect("/login");
                 return;
             }
-            res.redirect("/")
+            req.flash("success", "You're log in")
+            // res.send(userDoc);
+            res.redirect("/logged-home")
 
         })
         .catch(err => next(err))
 
 })
 
-router.get("/login", (req, res, next) => {
 
-    res.render("auth-views/login-form.hbs")
+
+router.get("/logout", (req, res, next) => {
+  // "req.logOut()" is a Passport method that removes the user ID from session
+  req.logOut();
+
+  req.flash("sucess", "Logged out successfully!");
+  res.redirect("/");
+})
+
+
+router.get("/logged-home", (req, res, next) => {
+    res.render("logged-home-page.hbs");
 })
 
 
