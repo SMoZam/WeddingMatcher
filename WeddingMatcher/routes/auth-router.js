@@ -45,9 +45,17 @@ router.post("/process-login", (req, res, next) => {
                 res.redirect("/login");
                 return;
             }
-            req.flash("success", "You're log in")
-            // res.send(userDoc);
-            res.redirect("/logged-home")
+
+            req.logIn(userDoc, () => {
+                req.flash("success", "You're logged in");
+                // console.log(userDoc.email)
+
+                res.redirect("/logged-home")
+
+            })
+
+
+
 
         })
         .catch(err => next(err))
@@ -57,11 +65,11 @@ router.post("/process-login", (req, res, next) => {
 
 
 router.get("/logout", (req, res, next) => {
-  // "req.logOut()" is a Passport method that removes the user ID from session
-  req.logOut();
+    // "req.logOut()" is a Passport method that removes the user ID from session
+    req.logOut();
 
-  req.flash("sucess", "Logged out successfully!");
-  res.redirect("/");
+    req.flash("sucess", "Logged out successfully!");
+    res.redirect("/");
 })
 
 

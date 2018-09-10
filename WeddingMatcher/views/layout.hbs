@@ -30,17 +30,17 @@
     <nav>
       <a href="/">Home</a>
 
-      {{!-- {{#if currentUser}} --}}
+      {{#if currentUser}}
         
         <a href="/logout">Log Out</a>
         <a href="#">Settings</a>
 
-      {{!-- {{else}} --}}
+      {{else}}
         <a href="/login">Log In</a>
-      {{!-- {{/if}} --}}
+      {{/if}}
       
     </nav>
-<h3>{{currentUser.email}} </h3>
+
   </header>
 
   {{{body}}}
