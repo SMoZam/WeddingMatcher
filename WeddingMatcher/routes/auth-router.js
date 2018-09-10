@@ -15,7 +15,7 @@ router.post("/process-signup", (req, res, next) => {
 
     const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
 
-    Guest.create({ firstName, lastName, birthday, gender, email, originalPassword })
+    Guest.create({ firstName, lastName, birthday, gender, email, encryptedPassword })
         .then(userDoc => {
             // req.flash("success", "Sign Up success");
             res.redirect("/");
