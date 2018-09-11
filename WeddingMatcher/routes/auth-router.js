@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require("bcrypt");
 const passport = require("passport");
 
-const Guest = require("../models/guest-model.js")
+const User = require("../models/user-model.js")
 
 const router = express.Router();
 
@@ -13,7 +13,7 @@ router.post("/process-signup", (req, res, next) => {
 
     const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
 
-    Guest.create({ firstName, lastName, birthday, gender, email, encryptedPassword })
+    User.create({ firstName, lastName, birthday, gender, email, encryptedPassword })
         .then(userDoc => {
             req.flash("success", "Sign Up success");
             res.redirect("/");
@@ -29,7 +29,7 @@ router.post("/process-login", (req, res, next) => {
 
     const { email, originalPassword } = req.body;
 
-    Guest.findOne({ email: { $eq: email } })
+    User.findOne({ email: { $eq: email } })
         .then(userDoc => {
             if (!userDoc) {
                 // saving a flash message to display in the LOGIN page

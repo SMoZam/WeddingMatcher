@@ -16,3 +16,19 @@
  <a href="/wedding/add">Add Your First Wedding</a>
  {{/each}}
 </ul>
+
+<ul>
+ {{#each weddingListArray}}
+ <li>
+   <h3>{{this.name}}</h3>
+   <p>{{this.description}}</p>
+   <img src="{{this.pictureUrl}}">
+ </li> 
+ {{else}}
+ <p>You're not invited to a wedding yet </p>
+ <a href="/wedding/add">Add Your First Wedding</a>
+ {{/each}}
+</ul>
+
+
+{{weddingListArray.name}}

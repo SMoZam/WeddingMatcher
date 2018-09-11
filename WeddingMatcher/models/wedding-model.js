@@ -14,7 +14,7 @@ const weddingSchema = new Schema({
     },
     guestList: [{
         type: Schema.Types.ObjectId,
-        ref: "Guest",
+        ref: "User",
         required: true,
     }],
 }, {

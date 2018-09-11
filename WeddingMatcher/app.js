@@ -55,6 +55,7 @@ app.use(session({
     resave: true,
     //use mongoose connection to store session information inside MongoDB
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
+
 }));
 
 
