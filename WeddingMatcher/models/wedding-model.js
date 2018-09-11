@@ -10,12 +10,12 @@ const weddingSchema = new Schema({
     owner: {
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true,
+        // required: true,
     },
     guestList: [{
         type: Schema.Types.ObjectId,
         ref: "User",
-        required: true,
+        // required: true,
     }],
 }, {
     timestamps: true
