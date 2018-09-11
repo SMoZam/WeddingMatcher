@@ -14,7 +14,7 @@ router.get("/my-wedding", (req, res, next) => {
   }
 
   // Find weddings owned by the logged in user
-  Wedding.find({ guestList: { $eq: req.user._id } })
+  Wedding.find({ owner: { $eq: req.user._id } })
     .sort({ createdAt: -1 }) // use ".sort()" to order results (-1 for reverse)
     .then(weddingResults => {
       res.locals.weddingArray = weddingResults;
@@ -36,9 +36,9 @@ router.get("/wedding/add", (req, res, next) => {
 
 router.post("/process-wedding", (req, res, next) => {
   const { name, description, pictureUrl } = req.body;
-  const guestList = req.user._id;
+  const owner = req.user._id;
 
-  Wedding.create({ name, description, pictureUrl, guestList })
+  Wedding.create({ name, description, pictureUrl, owner })
     .then(roomDoc => {
       req.flash("success", "Wedding created successfully!");
       res.redirect("/my-wedding");
