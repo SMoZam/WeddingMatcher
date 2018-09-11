@@ -1,0 +1,18 @@
+<h2>Your Wedding</h2>
+
+{{!-- {{> flash_messages}} --}}
+
+<a href="/wedding/add">Add a Wedding</a>
+
+<ul>
+ {{#each weddingArray}}
+ <li>
+   <h3>{{this.name}}</h3>
+   <p>{{this.description}}</p>
+   <img src="{{this.pictureUrl}}">
+ </li> 
+ {{else}}
+ <p>You don't have any wedding yet.</p>
+ <a href="/wedding/add">Add Your First Wedding</a>
+ {{/each}}
+</ul>

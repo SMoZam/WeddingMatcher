@@ -11,11 +11,7 @@ const weddingSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "Guest",
         required: true,
-
     }],
-
-
-
 }, {
     timestamps: true
 });

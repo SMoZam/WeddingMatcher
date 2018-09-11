@@ -19,7 +19,6 @@ router.post("/process-signup", (req, res, next) => {
             res.redirect("/");
         })
         .catch(err => next(err))
-
 })
 router.get("/login", (req, res, next) => {
 
@@ -51,17 +50,11 @@ router.post("/process-login", (req, res, next) => {
                 // console.log(userDoc.email)
 
                 res.redirect("/logged-home")
-
             })
-
-
-
-
         })
         .catch(err => next(err))
 
 })
-
 
 
 router.get("/logout", (req, res, next) => {
