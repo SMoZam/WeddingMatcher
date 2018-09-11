@@ -14,6 +14,7 @@ const MongoStore = require('connect-mongo')(session);
 const flash = require('connect-flash');
 const passportSetup = require("./config/passport/passport-setup.js");
 
+
 mongoose
     .connect('mongodb://localhost/weddingmatcher', { useNewUrlParser: true })
     .then(x => {
