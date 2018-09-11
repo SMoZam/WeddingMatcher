@@ -49,17 +49,10 @@ router.post("/process-login", (req, res, next) => {
             req.logIn(userDoc, () => {
                 req.flash("success", "You're logged in");
                 // console.log(userDoc.email)
-
                 res.redirect("/logged-home")
-
             })
-
-
-
-
         })
         .catch(err => next(err))
-
 })
 
 

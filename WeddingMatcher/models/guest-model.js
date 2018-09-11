@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const guestSchema = new Schema({
+const userSchema = new Schema({
 
     firstName: { type: String, required: true },
     firstName: { type: String, required: true },
@@ -46,6 +46,6 @@ const guestSchema = new Schema({
 // });
 
 
-const Guest = mongoose.model("Guest", guestSchema);
+const User = mongoose.model("User", userSchema);
 
-module.exports = Guest;
+module.exports = User;
