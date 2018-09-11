@@ -28,15 +28,26 @@
 
 
     <nav>
-      <a href="/">Home</a>
 
       {{#if currentUser}}
-        
-        <a href="/my-wedding">My Wedding</a>
-        <a href="/weddings">Weddings</a>
-        <a href="/logout">Log Out</a>
 
+      <div class="navbar">
+        <a href="/logged-home">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">{{currentUser.firstName}}
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="/my-wedding">My Wedding</a>
+            <a href="/weddings">Weddings</a>
+            <a href="/logout">Log Out</a>
+          </div>
+        </div> 
+      </div>
+        
+  
       {{else}}
+        <a href="/">Home</a>
         <a href="/login">Log In</a>
       {{/if}}
       
