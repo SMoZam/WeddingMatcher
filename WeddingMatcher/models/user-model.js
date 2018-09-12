@@ -7,7 +7,10 @@ const userSchema = new Schema({
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     description: { type: String },
-    pictureURL: { type: String },
+    avatar: {
+        type: String,
+        default: "https://media.giphy.com/media/hlMC1niOC58sw/giphy.gif",
+      },
     email: { type: String, required: true, unique: true },
     birthday: { type: Date },
     encryptedPassword: { type: String },

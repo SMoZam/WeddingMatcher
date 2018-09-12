@@ -65,6 +65,4 @@ router.get("/weddings", (req, res, next) => {
 })
 
 
-
-
 module.exports = router;
