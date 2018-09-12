@@ -116,14 +116,14 @@ const weddingData = [{
 
 
 
-// User.create(userData)
-//     .then(userResults => {
-//         console.log(`created ${userResults.length}`);
-//     })
-//     .catch(err => next(err));
-
-Wedding.create(weddingData)
+User.create(userData)
     .then(userResults => {
         console.log(`created ${userResults.length}`);
     })
     .catch(err => next(err));
+
+// Wedding.create(weddingData)
+//     .then(userResults => {
+//         console.log(`created ${userResults.length}`);
+//     })
+//     .catch(err => next(err));

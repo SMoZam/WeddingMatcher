@@ -1,0 +1,41 @@
+<h2>Edit you're Profil</h2>
+
+<form action="/process-settings" method="POST" enctype="multipart/form-data">
+  <label>
+    First name:
+    <input type="text" name="firstName" value="{{currentUser.firstName}}" placeholder="{{currentUser.firstName}}">
+  </label>
+  <br>
+
+   <label>
+    Last name:
+    <input type="text" name="lastName" value="{{currentUser.lastName}}" placeholder="{{currentUser.lastName}}">
+  </label>
+  <br>
+
+ <label>
+    Description:
+    <input type="text" name="description" value="{{currentUser.description}}" placeholder="{{currentUser.description}}">
+  </label>
+  <br>
+
+  <label>
+    Avatar: 
+    <input type="file" name="avatarUpload">
+  </label>
+
+  <label>
+    Email: 
+    <input type="email" name="email" value="{{currentUser.email}}" placeholder="leia@resistance.com">
+  </label>
+  <br>
+
+   <label>
+    Birtdhay:
+    <input type="date" name="birthday">
+  </label>
+  <br>
+
+
+  <button>Save Settings</button>
+</form>
