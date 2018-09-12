@@ -9,6 +9,7 @@ const User = require("../../models/user-model.js");
 passport.serializeUser((userDoc, done) => {
     console.log("SERIALIZE (save user ID to the session)");
 
+
     // "null" in the 1st argument tells Passport that there is "null" errors
     done(null, userDoc._id);
 });
@@ -41,4 +42,4 @@ function passportSetup(app) {
     });
 }
 
-module.exports = passportSetup;
+module.exports = passportSetup

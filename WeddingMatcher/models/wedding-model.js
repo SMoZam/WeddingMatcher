@@ -1,5 +1,9 @@
 const mongoose = require("mongoose");
 
+const passport = require("passport");
+
+const router = require("../routes/auth-router");
+
 const Schema = mongoose.Schema;
 
 const weddingSchema = new Schema({
@@ -20,6 +24,14 @@ const weddingSchema = new Schema({
 }, {
     timestamps: true
 });
+
+
+
+weddingSchema.virtual("isOwned").get(function() {
+    return this.owner === req.user;
+})
+
+
 
 const Wedding = mongoose.model("Wedding", weddingSchema);
 

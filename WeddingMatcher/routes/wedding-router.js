@@ -12,7 +12,6 @@ router.get("/my-wedding", (req, res, next) => {
         res.redirect("/login");
         return;
     }
-
     // Find weddings owned by the logged in user
     Wedding.find({ owner: { $eq: req.user._id } })
         .sort({ createdAt: -1 }) // use ".sort()" to order results (-1 for reverse)
@@ -24,6 +23,9 @@ router.get("/my-wedding", (req, res, next) => {
 });
 
 
+
+
+
 router.get("/wedding/add", (req, res, next) => {
     if (!req.user) {
         res.flash("error", "You must be logged in to add a wedding.");
@@ -32,6 +34,10 @@ router.get("/wedding/add", (req, res, next) => {
         res.render("wedding-views/wedding-form.hbs");
     }
 });
+
+
+
+
 
 router.post("/process-wedding", (req, res, next) => {
     const { name, description, pictureUrl } = req.body;
@@ -46,15 +52,16 @@ router.post("/process-wedding", (req, res, next) => {
 });
 
 
-router.get("/weddings", (req, res, next) => {
 
+
+
+router.get("/weddings", (req, res, next) => {
     // if you're not login
     if (!req.user) {
         req.flash("error", "You must be logged in to see your wedding.");
         res.redirect("/login");
         return;
     }
-
     Wedding.find({ "guestList": (req.user._id) })
         .then(result => {
             res.locals.weddingListArray = result;
@@ -63,6 +70,8 @@ router.get("/weddings", (req, res, next) => {
         })
         .catch(err => next(err));
 })
+
+
 
 
 

@@ -1,13 +1,28 @@
 <h2>Hello {{currentUser.firstName}} </h2>
 
+<ul>
+   <h2>Your Wedding: </h2>
+    {{#each weddingArray}}
+    <li>
+        <h3>{{this.name}}</h3>
+        <p>{{this.description}}</p>
+        <img src="{{this.pictureUrl}}">
+    </li>
+    {{else}}
+    <p>You don't have any wedding yet.</p>
+    <a href="/wedding/add">Add Your First Wedding</a>
+{{/each}}
+</ul>
 
-
-<section id="logged-home-page">
-    <div>
-        <a href="#0">Find a wedding</a>
-    </div>
-
-    <div>
-        <a href="/wedding/add">Add a new wedding</a>
-    </div>
-</section>
+<ul>
+    <h2>Weddings where you're invited</h2>
+    {{#each weddingListArray}}
+    <li>
+        <h3>{{this.name}}</h3>
+        <p>{{this.description}}</p>
+        <img src="{{this.pictureUrl}}">
+    </li>
+    {{else}}
+    <p>You're not invited to a wedding yet </p>
+{{/each}}
+</ul>

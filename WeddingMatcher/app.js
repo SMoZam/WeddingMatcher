@@ -65,12 +65,25 @@ app.use((req, res, next) => {
     res.locals.messages = req.flash();
     next();
 });
-passportSetup(app);
+
 
 // default value for title local
 app.locals.title = 'Wedding Matcher';
 
 
+
+// var exphbs = require('express-handlebars');
+// var hbsHelpers = exphbs.create({
+//     helpers: require("./helpers/handlebars.js").helpers,
+//     // defaultLayout: 'layout',
+//     extname: '.hbs'
+// });
+
+// app.engine('.hbs', hbsHelpers.engine);
+
+
+
+passportSetup(app);
 
 const index = require('./routes/index');
 app.use('/', index);
