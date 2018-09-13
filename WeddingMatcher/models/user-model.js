@@ -17,7 +17,8 @@ const userSchema = new Schema({
     unique: true,
     match: /^.+@.+\..+$/,
     },
-    birthday: { type: Date },
+    // birthday: { type: Date },
+    age: { type: Number, min: 18, max: 65 },
     encryptedPassword: { type: String },
     gender: { type: String, required: true },
     status: {

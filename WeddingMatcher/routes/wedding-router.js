@@ -24,8 +24,6 @@ router.get("/my-wedding", (req, res, next) => {
 
 
 
-
-
 router.get("/wedding/add", (req, res, next) => {
     if (!req.user) {
         res.flash("error", "You must be logged in to add a wedding.");
@@ -37,13 +35,11 @@ router.get("/wedding/add", (req, res, next) => {
 
 
 
-
-
 router.post("/process-wedding", (req, res, next) => {
-    const { name, description, pictureUrl } = req.body;
+    const { name, date, description, pictureUrl } = req.body;
     const owner = req.user._id;
 
-    Wedding.create({ name, description, pictureUrl, owner })
+    Wedding.create({ name, date, description, pictureUrl, owner })
         .then(roomDoc => {
             req.flash("success", "Wedding created successfully!");
             res.redirect("/my-wedding");

@@ -47,7 +47,7 @@ let avatar;
   )
   .then(userDoc => {
     // save a flash message to display in the HOME page
-    req.flash("sucess", "settings saved! 😏");
+    req.flash("success", "settings saved!");
     res.redirect(`user/${req.user._id}`);
   })
 });
