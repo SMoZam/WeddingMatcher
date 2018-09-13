@@ -156,15 +156,6 @@ footer p {
     display: none;
 }
 
-.sent {
-    color: blue;
-}
-
-.received {
-    color: red;
-    text-align: right;
-}
-
 footer {
     position: fixed;
     bottom: 0;
@@ -238,9 +229,9 @@ input[type=date] {
 }
 
 input[type=number] {
-  width: 75%;
-  margin-top: 12px;
-  padding-left: 20px;
+    width: 75%;
+    margin-top: 12px;
+    padding-left: 20px;
 }
 
 ::placeholder {
@@ -259,7 +250,7 @@ input[type=number]:focus {
 }
 
 .age {
-  padding-right: 10px;
+    padding-right: 10px;
 }
 
 
@@ -298,10 +289,10 @@ input[type=number]:focus {
 }
 
 .weddings {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 2%;
 }
 
 .weddings h2 {
@@ -323,7 +314,7 @@ input[type=number]:focus {
 
 .invited-wedding li:hover,
 .own-wedding li:hover {
-  transform: scale(1.04);
+    transform: scale(1.04);
 }
 
 .add-wedding {
@@ -349,37 +340,76 @@ input[type=number]:focus {
 }
 
 
-
 /*-------------------------- Wedding Details Page ---------------------------*/
 
 #wedding-details {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #singles-profils ul {
-  display: flex;
+    display: flex;
 }
 
 #wedding-details .text {
-  width: 660px;
-  padding-right: 70px;
+    width: 660px;
+    padding-right: 70px;
 }
 
 #wedding-details h3 {
-  background: #fff;
-  padding: 15px;
-  margin: 0;
-  margin-top: -2px;
-  border-radius: 0 0 10px 10px;
+    background: #fff;
+    padding: 15px;
+    margin: 0;
+    margin-top: -2px;
+    border-radius: 0 0 10px 10px;
 }
 
 .singles-profils li {
-  margin: 0 30px;
-  box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
-  transition: 0.4s;
+    margin: 0 30px;
+    box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+    transition: 0.4s;
 }
 
 .singles-profils li:hover {
-  transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+// ---------------MESSAGES--------------------
+.message-user {
+    display: flex;
+    text-align: center;
+}
+
+.message-user li {
+    margin: 0 30px;
+    box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+    transition: 0.4s;
+}
+
+.message-user h3 {
+    margin: 0;
+}
+
+.conversation-container {
+    background: #e7e4e4;
+}
+
+.conversation-container .sent {
+    background: #afaaa7;
+    font-weight: 600;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    margin-top: 15px;
+    border-radius: 0 0 10px 10px;
+    text-align: right;
+}
+
+.conversation-container .received {
+    background: #fff;
+    font-weight: 400;
+    padding: 15px;
+    margin: 0;
+    margin-top: 15px;
+    border-radius: 0 0 10px 10px;
 }

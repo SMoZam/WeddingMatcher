@@ -121,13 +121,6 @@ footer p {
 .visibility {
   display: none; }
 
-.sent {
-  color: blue; }
-
-.received {
-  color: red;
-  text-align: right; }
-
 footer {
   position: fixed;
   bottom: 0; }
@@ -301,5 +294,38 @@ input[type=number]:focus {
 
 .singles-profils li:hover {
   transform: scale(1.04); }
+
+.message-user {
+  display: flex;
+  text-align: center; }
+
+.message-user li {
+  margin: 0 30px;
+  box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+  transition: 0.4s; }
+
+.message-user h3 {
+  margin: 0; }
+
+.conversation-container {
+  background: #e7e4e4; }
+
+.conversation-container .sent {
+  background: #afaaa7;
+  font-weight: 600;
+  color: white;
+  padding: 15px;
+  margin: 0;
+  margin-top: 15px;
+  border-radius: 0 0 10px 10px;
+  text-align: right; }
+
+.conversation-container .received {
+  background: #fff;
+  font-weight: 400;
+  padding: 15px;
+  margin: 0;
+  margin-top: 15px;
+  border-radius: 0 0 10px 10px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,7 +2,7 @@
 
 <div class="picture-container own-wedding ">
 <ul>
-    <a  href="/conversations">GO back to conversations</a>
+    <a  href="/conversations"> <h3>Go back to conversations</h3></a>
     <li><img src="{{oneConversationArray.pictureUrl}}"  class="trigger-1"   width="200px" alt=""></li>
     
 </ul>
@@ -13,7 +13,7 @@
     <div class="">
         <p>{{fullConversationArray.[0].owners.[0].avatar}}</p>
         {{#each oneConversationArray.messages}}
-        <p class="{{this.class}}"  >{{this.text}}</p>
+        <p class="{{this.class}}"> {{this.text}}  </p>
         {{/each}}
          <form action="/add-message/{{oneConversationArray._id}}/process-message"  method="POST" class="" >
                     <label>
