@@ -42,7 +42,9 @@ header {
   font-family: inherit;
   margin: 0; }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
   background-color: red; }
 
 .dropdown-content {
@@ -67,8 +69,32 @@ header {
 .show {
   display: block; }
 
+.visibility {
+  display: none; }
+
+.sent {
+  color: blue; }
+
+.received {
+  color: red; }
+
 footer {
   position: fixed;
   bottom: 0; }
+
+.big-container {
+  display: flex; }
+
+.conversation-container {
+  padding: 5%; }
+
+.picture-container {
+  padding: 5%; }
+
+.display-0 {
+  display: none; }
+
+.display-1 {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

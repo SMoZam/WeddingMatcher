@@ -1,0 +1,76 @@
+{{!-- <ul>
+    <h2>Your Messages</h2>
+
+        {{#each fullConversationArray}}
+            <div class="selection color-black" >
+            {{#each this.owners}}
+                <img src="{{this.avatar}}" width="200px" alt="">
+            {{/each}}
+            {{#each this.messages}}
+            
+                <h3 class="{{this.class}}" > {{this.text}} </h3>
+            {{/each}}
+
+                <form action="/add-message/{{this._id}}/process-message"  method="POST" class="oneConversation visibility" >
+                    <label>
+                        Add a message : 
+                    <input type="text" name="text" placeholder="Add a new message">
+                    </label>
+                    <button>Send</button>
+                </form> 
+                </div>
+        {{/each}}
+
+</ul> --}}
+
+<div class="big-container" >
+
+<div class="picture-container">
+
+    <img src="{{fullConversationArray.[0].pictureUrl}}"   class="trigger-0" width="200px" alt="">
+    <p></p>
+
+    <img src="{{fullConversationArray.[1].pictureUrl}}"  class="trigger-1"   width="200px" alt="">
+    <p></p>
+
+</div>
+
+
+
+<div class="conversation-container">
+
+
+    <div class="conversation-0 display-0">
+        <p>{{fullConversationArray.[0].owners.[0].avatar}}</p>
+        {{#each fullConversationArray.[0].messages}}
+        <p class="{{this.class}}"  >{{this.text}}</p>
+        {{/each}}
+         <form action="/add-message/{{fullConversationArray.[0]._id}}/process-message"  method="POST" class="" >
+                    <label>
+                        Add a message : 
+                    <input type="text" name="text" placeholder="Add a new message">
+                    </label>
+                    <button>Send</button>
+                </form> 
+
+    </div>
+
+    <div class="conversation-1 display-1">
+        <p>{{fullConversationArray.[1].owners.[1].avatar}}</p>
+        {{#each fullConversationArray.[1].messages}}
+        <p class="{{this.class}}"  > {{this.text}}  </p>
+        {{/each}}
+         <form action="/add-message/{{fullConversationArray.[1]._id}}/process-message"  method="POST" class="" >
+                    <label>
+                        Add a message : 
+                    <input type="text" name="text" placeholder="Add a new message">
+                    </label>
+                    <button>Send</button>
+                </form> 
+    </div>
+
+    
+
+</div>
+
+</div>
