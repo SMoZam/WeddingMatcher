@@ -54,11 +54,35 @@ router.post("/add-message/:conversationId/process-message", (req, res, next) => 
         )
         .then(bookDoc => {
             // redirect if it's successful to avoid duplicating the submission
-            res.redirect("/conversations");
+            res.redirect(`/conversations/${conversationId}`);
         })
         // "next()" means show the error page
         .catch(err => next(err));
 });
+
+
+router.get("/conversations/:conversationId", (req, res, next) => {
+    const { conversationId } = req.params;
+    Conversation.findById(conversationId)
+        .populate("owners")
+        .populate("messages.user")
+        .then(conversationResultArray => {
+            //This is for changing the class of the messages
+            //checking the user who created the message 
+            //if it's req.user._id then it is a sent message, else it's received
+            for (var i = 0; i < conversationResultArray.messages.length; i++) {
+                if (String(conversationResultArray.messages[i].user._id) == String(req.user._id)) {
+                    conversationResultArray.messages[i].class = "sent";
+                } else {
+                    conversationResultArray.messages[i].class = "received";
+                }
+            };
+            res.locals.oneConversationArray = conversationResultArray;
+            res.render("conversations/one-conversation.hbs")
+        })
+        .catch(err => next(err))
+})
+
 
 
 

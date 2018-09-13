@@ -1,0 +1,24 @@
+<ul>
+    <h2>Your Messages</h2>
+
+        {{#each fullConversationArray}}
+            <div class="selection" >
+            {{#each this.owners}}
+                <img src="{{this.avatar}}" width="200px" alt="">
+            {{/each}}
+            {{#each this.messages}}
+            
+                <h3 class="{{this.class}}" > {{this.text}} </h3>
+            {{/each}}
+
+                <form action="/add-message/{{this._id}}/process-message"  method="POST" class="oneConversation visibility" >
+                    <label>
+                        Add a message : 
+                    <input type="text" name="text" placeholder="Add a new message">
+                    </label>
+                    <button>Send</button>
+                </form> 
+                </div>
+        {{/each}}
+
+</ul>
