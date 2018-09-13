@@ -1,28 +1,36 @@
-<h2>Hello {{currentUser.firstName}} </h2>
+<section id="logged-home-page">
 
-<ul>
-   <h2>Your Wedding: </h2>
-    {{#each weddingArray}}
-    <li>
-        <h3>{{this.name}}</h3>
-        <p>{{this.description}}</p>
-        <img src="{{this.pictureUrl}}">
-    </li>
-    {{else}}
-    <p>You don't have any wedding yet.</p>
-    <a href="/wedding/add">Add Your First Wedding</a>
-{{/each}}
-</ul>
+    <h2>Hello {{currentUser.firstName}}!</h2>
 
-<ul>
-    <h2>Weddings where you're invited</h2>
-    {{#each weddingListArray}}
-    <li>
-        <h3>{{this.name}}</h3>
-        <p>{{this.description}}</p>
-        <img src="{{this.pictureUrl}}">
-    </li>
-    {{else}}
-    <p>You're not invited to a wedding yet </p>
-{{/each}}
-</ul>
+    <div class="weddings">
+        <div class="own-wedding">
+            <h2>Your Wedding </h2>
+            <ul>
+                {{#each weddingArray}}
+                <li>
+                    <a href="/wedding/{{this._id}}"><img src="{{this.pictureUrl}}"></a>
+                    <a href="/wedding/{{this._id}}"><h3>{{this.name}}</h3></a>
+                </li>
+                {{else}}
+            </ul>
+                <p>You don't have any wedding yet.</p>
+                <p class="add-wedding"><a href="/wedding/add">Add Your First Wedding <br><i class="fas fa-plus"></i></a></p>
+            {{/each}}
+        </div>
+
+        <div class="invited-wedding">
+            <h2>Weddings where you're invited</h2>
+            <ul>
+                {{#each weddingListArray}}
+                <li>
+                    <a href="/wedding/{{this._id}}"><img src="{{this.pictureUrl}}"></a>
+                    <a href="/wedding/{{this._id}}"><h3>{{this.name}}</h3></a>
+                </li>
+                {{else}}
+                <p>You're not invited to a wedding yet </p>
+            {{/each}}
+            </ul>
+        </div>
+    </div>
+
+</section>

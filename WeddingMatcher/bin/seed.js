@@ -23,6 +23,7 @@ const userData = [{
         email: "g1@g.g",
         encryptedPassword: bcrypt.hashSync("g1", 10),
         gender: "male",
+        status: "single",
     },
     {
         firstName: "Owner2",
@@ -30,6 +31,7 @@ const userData = [{
         email: "g2@g.g",
         encryptedPassword: bcrypt.hashSync("g2", 10),
         gender: "male",
+        status: "relationship",
     },
     {
         firstName: "Owner3",
@@ -37,6 +39,7 @@ const userData = [{
         email: "g3@g.g",
         encryptedPassword: bcrypt.hashSync("g3", 10),
         gender: "female",
+        status: "single",
     },
     {
         firstName: "Guest4",
@@ -44,6 +47,7 @@ const userData = [{
         email: "g4@g.g",
         encryptedPassword: bcrypt.hashSync("g4", 10),
         gender: "female",
+        status: "single",
     },
     {
         firstName: "Guest5",
@@ -51,12 +55,15 @@ const userData = [{
         email: "g5@g.g",
         encryptedPassword: bcrypt.hashSync("g5", 10),
         gender: "female",
+        status: "single",
     }, {
+
         firstName: "Guest6",
         lastName: "Paillette",
         email: "g6@g.g",
         encryptedPassword: bcrypt.hashSync("g6", 10),
         gender: "male",
+        status: "single",
     },
     {
         firstName: "Guest7",
@@ -64,6 +71,7 @@ const userData = [{
         email: "g7@g.g",
         encryptedPassword: bcrypt.hashSync("g7", 10),
         gender: "male",
+        status: "relationship",
     },
     {
         firstName: "Guest8",
@@ -71,6 +79,7 @@ const userData = [{
         email: "g8@g.g",
         encryptedPassword: bcrypt.hashSync("g8", 10),
         gender: "female",
+        status: "relationship",
     },
     {
         firstName: "Guest9",
@@ -78,6 +87,7 @@ const userData = [{
         email: "g9@g.g",
         encryptedPassword: bcrypt.hashSync("g9", 10),
         gender: "female",
+        status: "relationship",
     },
     {
         firstName: "Guest10",
@@ -85,6 +95,7 @@ const userData = [{
         email: "g10@g.g",
         encryptedPassword: bcrypt.hashSync("g10", 10),
         gender: "female",
+        status: "single",
     }
 ];
 
@@ -154,6 +165,12 @@ const conversationData = [{
 //         console.log(`created ${userResults.length}`);
 //     })
 //     .catch(err => next(err));
+User.create(userData)
+    .then(userResults => {
+        console.log(`created ${userResults.length}`);
+    })
+    .catch(err => next(err));
+
 
 // Wedding.create(weddingData)
 //     .then(userResults => {

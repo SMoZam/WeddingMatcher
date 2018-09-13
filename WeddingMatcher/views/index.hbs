@@ -1,12 +1,9 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-
 <section id="home-page">
-    <div class="image">
-        <img src="" alt="">
+    <div class="home-image">
+        <img src="/images/boutonniere.jpg" height="600px">
     </div>
 
-    <div>
+    <div class="home-text">
         <h2>Create an account</h2>
         <p>It's free and fast</p>
 
@@ -18,17 +15,11 @@
             <input type="date" name="birthday">
             <br>
             
-            <div>
+            <div class="radio-option">
                 <input type="radio" name="gender" value="female">
                 <label>Female</label>
-            </div>
-
-            <div>
                 <input type="radio" name="gender" value="male">
                 <label>Male</label>
-            </div>
-
-            <div>
                 <input type="radio" name="gender" value="other">
                 <label>Other</label>
             </div>
@@ -38,6 +29,13 @@
 
             <input type="password" name="originalPassword" placeholder="Your password">
             <br>
+
+            <div class="radio-option">
+                <input type="radio" name="status" value="single">
+                <label>Single</label>
+                <input type="radio" name="status" value="relationship">
+                <label>In a Relationship</label>
+            </div>
 
             <button>Submit</button>
         </form>
