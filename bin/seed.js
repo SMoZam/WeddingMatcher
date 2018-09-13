@@ -20,6 +20,7 @@ mongoose
 const userData = [{
         firstName: "Clémence",
         lastName: "Waters",
+        age: "30",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842356/women-3.jpg",
         email: "clemence@wedding.com",
         encryptedPassword: bcrypt.hashSync("clemence", 10),
@@ -30,6 +31,7 @@ const userData = [{
     {
         firstName: "Asel",
         lastName: "Moran",
+        age: "28",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842355/women-5.jpg",
         email: "asel@wedding.com",
         encryptedPassword: bcrypt.hashSync("asel", 10),
@@ -40,6 +42,7 @@ const userData = [{
     {
         firstName: "Guillaume",
         lastName: "Munoz",
+        age: "29",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842356/men-5.jpg",
         email: "guillaume@wedding.com",
         encryptedPassword: bcrypt.hashSync("guillaume", 10),
@@ -50,6 +53,7 @@ const userData = [{
     {
         firstName: "Janie",
         lastName: "Santos",
+        age: "35",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842356/women-4.jpg",
         email: "janie@wedding.com",
         encryptedPassword: bcrypt.hashSync("janie", 10),
@@ -60,6 +64,7 @@ const userData = [{
     {
         firstName: "Georgia",
         lastName: "Santiago",
+        age: "27",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842356/women-2.jpg",
         email: "georgia@wedding.com",
         encryptedPassword: bcrypt.hashSync("georgia", 10),
@@ -70,6 +75,7 @@ const userData = [{
 
         firstName: "Beatrice",
         lastName: "Benson",
+        age: "31",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842355/women-6.jpg",
         email: "beatrice@wedding.com",
         encryptedPassword: bcrypt.hashSync("beatrice", 10),
@@ -80,6 +86,7 @@ const userData = [{
     {
         firstName: "Lucile",
         lastName: "Barnes",
+        age: "36",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842356/women-1.jpg",
         email: "lucile@wedding.com",
         encryptedPassword: bcrypt.hashSync("lucile", 10),
@@ -90,6 +97,7 @@ const userData = [{
     {
         firstName: "Marlon",
         lastName: "Armstrong",
+        age: "28",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842356/men-6.jpg",
         email: "marlon@wedding.com",
         encryptedPassword: bcrypt.hashSync("marlon", 10),
@@ -100,6 +108,7 @@ const userData = [{
     {
         firstName: "Tommy",
         lastName: "Chavez",
+        age: "32",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842355/men-3.jpg",
         email: "tommy@wedding.com",
         encryptedPassword: bcrypt.hashSync("tommy", 10),
@@ -110,6 +119,7 @@ const userData = [{
     {
         firstName: "Jay",
         lastName: "Fuller",
+        age: "36",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842355/men-1.jpg",
         email: "jay@wedding.com",
         encryptedPassword: bcrypt.hashSync("jay", 10),
@@ -120,6 +130,7 @@ const userData = [{
     {
         firstName: "Tommy",
         lastName: "Chavez",
+        age: "29",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842355/men-4.jpg",
         email: "tommy@wedding.com",
         encryptedPassword: bcrypt.hashSync("tommy", 10),
@@ -130,6 +141,7 @@ const userData = [{
     {
         firstName: "Mickeal",
         lastName: "Waters",
+        age: "33",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842355/men-2.jpg",
         email: "mickael@wedding.com",
         encryptedPassword: bcrypt.hashSync("mickael", 10),
@@ -140,6 +152,7 @@ const userData = [{
     {
         firstName: "Alberto",
         lastName: "Reid",
+        age: "29",
         avatar: "https://res.cloudinary.com/paulette/image/upload/v1536842917/men-7.jpg",
         email: "alberto@wedding.com",
         encryptedPassword: bcrypt.hashSync("alberto", 10),
@@ -151,25 +164,25 @@ const userData = [{
 
 const weddingData = [{
         name: "Charles & Clémence's Wedding",
-        owner: "5b97b365b8202216232632a2",
-        guestList: ["5b97b365b8202216232632a3", "5b97b365b8202216232632a4"],
+        owner: "",
+        guestList: [],
         date: "Le samedi 25 août 2019",
         description: "Ergo ego senator inimicus, si ita vultis, homini, amicus esse, sicut semper fui, rei publicae debeo. Quid? si ipsas inimicitias, depono rei publicae causa, quis me tandem iure reprehendet, praesertim cum ego omnium meorum consiliorum atque factorum exempla semper ex summorum hominum consiliis atque factis mihi censuerim petenda. <br />Iam virtutem ex consuetudine vitae sermonisque nostri interpretemur nec eam, ut quidam docti, verborum magnificentia metiamur virosque bonos eos, qui habentur, numeremus, Paulos, Catones, Galos, Scipiones, Philos; his communis vita contenta est; eos autem omittamus, qui omnino nusquam reperiuntur.",
         pictureUrl: "https://res.cloudinary.com/paulette/image/upload/v1536772907/mariage-1.jpg",
     },
     {
         name: "Gaël & Asel's Wedding",
-        owner: "5b97b365b8202216232632a3",
+        owner: "",
         date: "Le samedi 10 juillet 2019",
-        guestList: ["5b97b365b8202216232632a4", "5b97b365b8202216232632a2"],
+        guestList: [],
         description: "Ergo ego senator inimicus, si ita vultis, homini, amicus esse, sicut semper fui, rei publicae debeo. Quid? si ipsas inimicitias, depono rei publicae causa, quis me tandem iure reprehendet, praesertim cum ego omnium meorum consiliorum atque factorum exempla semper ex summorum hominum consiliis atque factis mihi censuerim petenda. <br />Iam virtutem ex consuetudine vitae sermonisque nostri interpretemur nec eam, ut quidam docti, verborum magnificentia metiamur virosque bonos eos, qui habentur, numeremus, Paulos, Catones, Galos, Scipiones, Philos; his communis vita contenta est; eos autem omittamus, qui omnino nusquam reperiuntur.",
         pictureUrl: "https://res.cloudinary.com/paulette/image/upload/v1536772907/maraige-2.jpg",
     },
     {
         name: "Btissam & Guillaume's Wedding",
-        owner: "5b97b365b8202216232632a4",
+        owner: "",
         date: "Le samedi 22 juillet 2019",
-        guestList: ["5b97b365b8202216232632a2", "5b97b365b8202216232632a3"],
+        guestList: [],
         description: "Ergo ego senator inimicus, si ita vultis, homini, amicus esse, sicut semper fui, rei publicae debeo. Quid? si ipsas inimicitias, depono rei publicae causa, quis me tandem iure reprehendet, praesertim cum ego omnium meorum consiliorum atque factorum exempla semper ex summorum hominum consiliis atque factis mihi censuerim petenda. <br />Iam virtutem ex consuetudine vitae sermonisque nostri interpretemur nec eam, ut quidam docti, verborum magnificentia metiamur virosque bonos eos, qui habentur, numeremus, Paulos, Catones, Galos, Scipiones, Philos; his communis vita contenta est; eos autem omittamus, qui omnino nusquam reperiuntur.",
         pictureUrl: "https://res.cloudinary.com/paulette/image/upload/v1536772907/mariage-3.jpg",
     }
@@ -213,11 +226,6 @@ const conversationData = [{
 
 
 
-// User.create(userData)
-//     .then(userResults => {
-//         console.log(`created ${userResults.length}`);
-//     })
-//     .catch(err => next(err));
 User.create(userData)
     .then(userResults => {
         console.log(`created ${userResults.length}`);
@@ -225,14 +233,14 @@ User.create(userData)
     .catch(err => next(err));
 
 
-// Wedding.create(weddingData)
-//     .then(userResults => {
-//         console.log(`created ${userResults.length}`);
-//     })
-//     .catch(err => next(err));
-
-Conversation.create(conversationData)
+Wedding.create(weddingData)
     .then(userResults => {
         console.log(`created ${userResults.length}`);
     })
     .catch(err => next(err));
+
+// Conversation.create(conversationData)
+//     .then(userResults => {
+//         console.log(`created ${userResults.length}`);
+//     })
+//     .catch(err => next(err));
