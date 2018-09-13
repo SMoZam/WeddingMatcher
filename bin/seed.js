@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const User = require("../models/user-model.js");
 const Wedding = require("../models/wedding-model.js");
@@ -8,7 +8,7 @@ const bcrypt = require("bcrypt");
 
 mongoose.Promise = Promise;
 mongoose
-    .connect('mongodb://localhost/weddingmatcher', { useNewUrlParser: true })
+    .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
     .then(x => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
     })
