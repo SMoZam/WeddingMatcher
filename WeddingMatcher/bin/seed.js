@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const User = require("../models/user-model.js");
 const Wedding = require("../models/wedding-model.js");
+const Conversation = require("../models/conversation-model.js");
 
 const bcrypt = require("bcrypt");
 
@@ -122,6 +123,48 @@ const weddingData = [{
 ];
 
 
+const conversationData = [{
+        owners: ["5b97b365b8202216232632a2", "5b97b365b8202216232632a3"],
+        messages: [{
+            user: "5b97b365b8202216232632a2",
+            text: "Hello I'm Owner1"
+        }, {
+            user: "5b97b365b8202216232632a3",
+            text: "Hi I'm Owner2"
+        }],
+        pictureUrl: "https://media.giphy.com/media/wG1i2KJyB3zlC/giphy.gif",
+    },
+    {
+        owners: ["5b97b365b8202216232632a4", "5b97b365b8202216232632a2"],
+        messages: [{
+            user: "5b97b365b8202216232632a2",
+            text: "Hello I'm Owner1"
+        }, {
+            user: "5b97b365b8202216232632a4",
+            text: "Hi I'm Owner3"
+        }],
+        pictureUrl: "https://media.giphy.com/media/wG1i2KJyB3zlC/giphy.gif",
+    },
+    {
+        owners: ["5b97b365b8202216232632a3", "5b97b365b8202216232632a4"],
+        messages: [{
+            user: "5b97b365b8202216232632a4",
+            text: "Hello I'm Owner3"
+        }, {
+            user: "5b97b365b8202216232632a3",
+            text: "Hi I'm Owner2"
+        }],
+        pictureUrl: "https://media.giphy.com/media/wG1i2KJyB3zlC/giphy.gif",
+    }
+];
+
+
+
+// User.create(userData)
+//     .then(userResults => {
+//         console.log(`created ${userResults.length}`);
+//     })
+//     .catch(err => next(err));
 User.create(userData)
     .then(userResults => {
         console.log(`created ${userResults.length}`);
@@ -134,3 +177,9 @@ User.create(userData)
 //         console.log(`created ${userResults.length}`);
 //     })
 //     .catch(err => next(err));
+
+Conversation.create(conversationData)
+    .then(userResults => {
+        console.log(`created ${userResults.length}`);
+    })
+    .catch(err => next(err));

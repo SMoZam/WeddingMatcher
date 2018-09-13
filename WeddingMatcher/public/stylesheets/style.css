@@ -91,7 +91,9 @@ footer p {
   font-weight: 600;
   text-transform: uppercase; }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.dropbtn:focus {
   color: #fc6076; }
 
 .dropdown-content {
@@ -115,6 +117,34 @@ footer p {
 
 .show {
   display: block; }
+
+.visibility {
+  display: none; }
+
+.sent {
+  color: blue; }
+
+.received {
+  color: red; }
+
+footer {
+  position: fixed;
+  bottom: 0; }
+
+.big-container {
+  display: flex; }
+
+.conversation-container {
+  padding: 5%; }
+
+.picture-container {
+  padding: 5%; }
+
+.display-0 {
+  display: none; }
+
+.display-1 {
+  display: none; }
 
 /*-------------------------- Home Page ---------------------------*/
 #home-page {
@@ -148,7 +178,9 @@ input {
 .radio-option label {
   padding: 0 15px 0 7px; }
 
-input[type=email], input[type=password], input[type=date] {
+input[type=email],
+input[type=password],
+input[type=date] {
   width: 100%;
   margin-top: 12px; }
 
@@ -156,7 +188,10 @@ input[type=email], input[type=password], input[type=date] {
   color: #616161;
   padding-left: 10px; }
 
-input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, input[type=date]:focus {
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=text]:focus,
+input[type=date]:focus {
   outline: none;
   border: 1px solid #fc6076;
   box-shadow: 0px 0px 20px rgba(36, 37, 38, 0.13); }
@@ -178,7 +213,8 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 
 /*-------------------------- Logged Home Page ---------------------------*/
 #logged-home-page h2 {
-  text-align: center; }
+  text-align: center;
+  margin-top: 50px; }
 
 #logged-home-page h3 {
   background: #fff;
@@ -191,16 +227,18 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-top: 5%; }
+  margin-top: 2%; }
 
 .weddings h2 {
   text-align: center; }
 
-.invited-wedding ul, .own-wedding ul {
+.invited-wedding ul,
+.own-wedding ul {
   display: flex;
   text-align: center; }
 
-.invited-wedding li, .own-wedding li {
+.invited-wedding li,
+.own-wedding li {
   margin: 0 30px;
   box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13); }
 

@@ -94,5 +94,8 @@ app.use('/', auth);
 const weddingRouter = require("./routes/wedding-router.js");
 app.use("/", weddingRouter);
 
+const conversationRouter = require("./routes/conversations-router.js");
+app.use("/", conversationRouter);
+
 
 module.exports = app;
