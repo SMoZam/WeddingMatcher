@@ -52,9 +52,6 @@ router.post("/process-wedding", (req, res, next) => {
 });
 
 
-
-
-
 router.get("/weddings", (req, res, next) => {
     // if you're not login
     if (!req.user) {
@@ -72,7 +69,17 @@ router.get("/weddings", (req, res, next) => {
 })
 
 
-
+router.get("/wedding/:weddingId", (req, res, next) => {
+    const { weddingId } = req.params;
+  
+    Wedding.findById(weddingId)
+    .populate("guestList")
+    .then(weddingDoc => {
+      res.locals.weddingItem = weddingDoc;
+      res.render("wedding-views/wedding-details.hbs");
+    })
+    .catch(err => next(err));
+  });
 
 
 

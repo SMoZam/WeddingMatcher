@@ -1,36 +1,102 @@
 body {
-  padding: 0 20px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #3d3d3d;
+  background: rgba(243, 243, 243, 0.42);
 }
 
 a {
-  color: #00B7FF;
+  color: #292929;
+  text-decoration: none;
 }
 
-#top-menu {
+li {
+  list-style: none;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 0;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+form button {
+  margin-top: 25px;
+  padding: 10px 75px;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  color: white;
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
+
+/*-------------------------- Header, Footer & Top Menu ---------------------------*/
+
+// #top-menu {
+//   color: #fff;
+//   background: #fd7c5f;
+//   text-align: center;
+  // height: 40px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+// }
+
+.success-message {
+  color: #fff;
+  background: #fd7c5f;
   text-align: center;
+  padding: 10px 0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // border-bottom: 1px solid #D6D6D6;
+  background: #fff;
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.1);
 }
 
-/*-- Navbar --*/
+.logo {
+  padding-left: 30px; 
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #f6f6f6;
+  font-size: 13px;
+  background-image: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
+}
+
+footer p {
+  padding-left: 20px;
+}
+
+/*-------------------------- Navbar ---------------------------*/
 .navbar {
   overflow: hidden;
-  background-color: #333;
   font-family: Arial, Helvetica, sans-serif;
+  padding-right: 30px;
 }
 
 .navbar a {
   float: left;
-  font-size: 16px;
-  color: white;
+  font-size: 15px;
+  color: #4d4d4d;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .dropdown {
@@ -40,18 +106,20 @@ header {
 
 .dropdown .dropbtn {
   cursor: pointer;
-  font-size: 16px;    
+  font-size: 15px;    
   border: none;
   outline: none;
-  color: white;
+  color: #4d4d4d;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: red;
+  color: #fc6076;
 }
 
 .dropdown-content {
@@ -80,18 +148,138 @@ header {
   display: block;
 }
 
-
-
-
-
-
-
-
-
-
-
-footer {
-  position: fixed;
-  bottom: 0;
+/*-------------------------- Home Page ---------------------------*/
+#home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
 }
+
+.home-text {
+  margin-left: 90px;
+  padding: 35px 50px 40px;
+  border: 1px solid #f4f4f4;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 1px 2px 20px rgba(36,37,38,0.13);
+}
+
+.home-text form {
+  text-align: center;
+}
+
+input {
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #c0c0c0;
+  transition: 0.4s;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.radio-option label {
+  padding: 0 15px 0 7px;
+}
+
+input[type=email], input[type=password], input[type=date] {
+  width: 100%;
+  margin-top: 12px;
+}
+
+::placeholder {
+  color: rgb(97, 97, 97);
+  padding-left: 10px;
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, input[type=date]:focus {
+  outline: none;
+  border: 1px solid #fc6076;
+  box-shadow: 0px 0px 20px rgba(36,37,38,0.13);
+}
+
+
+/*-------------------------- Login Page ---------------------------*/
+
+#login-form {
+  display: flex;
+  align-items: center;
+  height: 600px;
+}
+
+.login-wrapper {
+  width: 420px;
+  margin: auto;
+  padding: 50px 50px 60px;
+  border: 1px solid #f4f4f4;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 2px 20px rgba(36,37,38,0.13);
+}
+
+
+/*-------------------------- Logged Home Page ---------------------------*/
+
+#logged-home-page h2 {
+  text-align: center;
+}
+
+#logged-home-page h3 {
+  background: #fff;
+  padding: 15px;
+  margin: 0;
+  margin-top: -2px;
+  border-radius: 0 0 10px 10px;
+}
+
+.weddings {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  height: 550px;
+  align-items: center;
+}
+
+.weddings h2 {
+  text-align: center;
+}
+
+.invited-wedding ul, .own-wedding ul {
+  display: flex;
+  text-align: center;
+}
+
+.invited-wedding li, .own-wedding li {
+  margin: 0 30px;
+  box-shadow: 1px 2px 20px rgba(36,37,38,0.13);
+}
+
+.add-wedding {
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.add-wedding a {
+  color: #fd7c5f;
+  transition: 0.4s;
+}
+
+.add-wedding a:hover {
+  font-size: 17px;
+}
+
+.fa-plus {
+  color: #fff;
+  border: 1px solid #fd7c5f;
+  border-radius: 65px;
+  padding: 6px 7px;
+  background: #fd7c5f;
+}
+
+
+
 

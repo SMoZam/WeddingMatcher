@@ -11,10 +11,21 @@ const userSchema = new Schema({
         type: String,
         default: "https://media.giphy.com/media/hlMC1niOC58sw/giphy.gif",
       },
-    email: { type: String, required: true, unique: true },
+    email: {
+    type: String,
+    required: true,
+    unique: true,
+    match: /^.+@.+\..+$/,
+    },
     birthday: { type: Date },
     encryptedPassword: { type: String },
     gender: { type: String, required: true },
+    status: {
+        type: String,
+        enum: [ "single", "relationship" ],
+        required: true, 
+        // default: "normal",
+      },
     messages: [{
         type: Schema.Types.ObjectId,
         ref: "Message",
@@ -44,9 +55,9 @@ const userSchema = new Schema({
     timestamps: true
 });
 
-// userSchema.virtual("isAdmin").get(function() {
-//     return this.role === "admin" && this.createdWeddings === "?";
-// });
+userSchema.virtual("isSingle").get(function() {
+    return this.status === "single";
+});
 
 
 const User = mongoose.model("User", userSchema);

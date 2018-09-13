@@ -13,11 +13,11 @@ const router = express.Router();
 
 
 router.post("/process-signup", (req, res, next) => {
-    const { firstName, lastName, birthday, gender, email, originalPassword } = req.body;
+    const { firstName, lastName, birthday, gender, email, originalPassword, status } = req.body;
     const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
-    User.create({ firstName, lastName, birthday, gender, email, encryptedPassword })
+    User.create({ firstName, lastName, birthday, gender, email, encryptedPassword, status })
         .then(userDoc => {
-            req.flash("success", "Sign Up success");
+            req.flash("success", "Sign Up successfully!");
             res.redirect("/");
         })
         .catch(err => next(err))
@@ -49,7 +49,7 @@ router.post("/process-login", (req, res, next) => {
                 return;
             }
             req.logIn(userDoc, () => {
-                req.flash("success", "Sign Up success");
+                req.flash("success", "Sign Up successfully!");
                 res.redirect("/logged-home");
             })
         })
@@ -62,7 +62,7 @@ router.post("/process-login", (req, res, next) => {
 router.get("/logout", (req, res, next) => {
     // "req.logOut()" is a Passport method that removes the user ID from session
     req.logOut();
-    req.flash("sucess", "Logged out successfully!");
+    req.flash("success", "Logged out successfully!");
     res.redirect("/");
 })
 

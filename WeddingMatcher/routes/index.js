@@ -53,16 +53,4 @@ let avatar;
 });
 
 
-// router.get("/wedding/:weddingId", (req, res, next) => {
-//     const { weddingId } = req.params;
-  
-//     Wedding.findById(weddingId)
-//     .then(weddingDoc => {
-//       res.locals.weddingItem = weddingDoc;
-//       res.render("wedding-details.hbs");
-//     })
-//     .catch(err => next(err));
-//   });
-
-
 module.exports = router;
