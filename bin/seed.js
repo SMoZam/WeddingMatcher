@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const User = require("../models/user-model.js");
 const Wedding = require("../models/wedding-model.js");
@@ -8,7 +8,7 @@ const bcrypt = require("bcrypt");
 
 mongoose.Promise = Promise;
 mongoose
-    .connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+    .connect("mongodb://heroku_ss7d63cb:a44d3kcchtgtrustuvdlp1ppqf@ds161316.mlab.com:61316/heroku_ss7d63cb", { useNewUrlParser: true })
     .then(x => {
         console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
     })
