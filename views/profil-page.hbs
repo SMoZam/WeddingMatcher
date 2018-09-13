@@ -1,16 +1,19 @@
+
 <section id="profil-section">
 
-<h2>Profil</h2>
+  <div class="profil-wrapper">
 
-<img src="{{userItem.avatar}}" height="100px">
+    <div class="image">
+      <img src="{{userItem.avatar}}" height="500px"> 
+    </div>
 
-<h3>{{userItem.firstName}} {{userItem.lastName}}</h3>
+    <div class="text">
+      <h2>{{userItem.firstName}} {{userItem.lastName}}</h2>
+      <p><b>Age - {{userItem.age}}</b></p>
+      <p>{{userItem.description}}</p>
+      <a class="link-button" href="/settings">Edit Profil</a>
+    </div>
 
-<p>{{userItem.description}}</p>
-
-
-<p>Age: {{userItem.age}}</p>
-
-<a href="/settings">Edit Profil</a>
+  </div>
 
 </section>

@@ -1,41 +1,49 @@
-<h2>Edit you're Profil</h2>
+<section id="setting-page">
 
-<form action="/process-settings" method="POST" enctype="multipart/form-data">
-  <label>
-    First name:
-    <input type="text" name="firstName" value="{{currentUser.firstName}}" placeholder="{{currentUser.firstName}}">
-  </label>
-  <br>
+  <div class="setting-wrapper">
 
-   <label>
-    Last name:
-    <input type="text" name="lastName" value="{{currentUser.lastName}}" placeholder="{{currentUser.lastName}}">
-  </label>
-  <br>
+    <h2>Edit you're Profil</h2>
 
- <label>
-    Description:
-    <input type="text" name="description" value="{{currentUser.description}}" placeholder="{{currentUser.description}}">
-  </label>
-  <br>
+    <form action="/process-settings" method="POST" enctype="multipart/form-data">
+      <label>
+        First name:
+        <input type="text" name="firstName" value="{{currentUser.firstName}}" placeholder="{{currentUser.firstName}}">
+      </label>
+      <br>
 
-  <label>
-    Avatar: 
-    <input type="file" name="avatarUpload">
-  </label>
+      <label>
+        Last name:
+        <input type="text" name="lastName" value="{{currentUser.lastName}}" placeholder="{{currentUser.lastName}}">
+      </label>
+      <br>
 
-  <label>
-    Email: 
-    <input type="email" name="email" value="{{currentUser.email}}" placeholder="leia@resistance.com">
-  </label>
-  <br>
+    <label>
+        Description:
+        <textarea type="text" name="description" value="{{currentUser.description}}">{{currentUser.description}}</textarea> 
+      </label>
+      <br>
 
-   <label>
-    Birtdhay:
-    <input type="date" name="birthday">
-  </label>
-  <br>
+      <label>
+        Age:
+        <input type="number" name="age" min="18" max="65">
+      </label>
 
+      <label>
+        Avatar: 
+        <input type="file" name="avatarUpload">
+      </label>
+      <br>
 
-  <button>Save Settings</button>
-</form>
+      <label>
+        Email: 
+        <input type="email" name="email" value="{{currentUser.email}}" placeholder="leia@resistance.com">
+      </label>
+      <br>
+
+      <button>Save Settings</button>
+    </form>
+
+  </div>
+
+</section>
+
