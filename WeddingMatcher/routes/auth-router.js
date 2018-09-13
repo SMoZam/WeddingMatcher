@@ -13,9 +13,9 @@ const router = express.Router();
 
 
 router.post("/process-signup", (req, res, next) => {
-    const { firstName, lastName, birthday, gender, email, originalPassword, status } = req.body;
+    const { firstName, lastName, age, gender, email, originalPassword, status } = req.body;
     const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
-    User.create({ firstName, lastName, birthday, gender, email, encryptedPassword, status })
+    User.create({ firstName, lastName, age, gender, email, encryptedPassword, status })
         .then(userDoc => {
             req.flash("success", "Sign Up successfully!");
             res.redirect("/");

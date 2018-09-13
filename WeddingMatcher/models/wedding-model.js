@@ -9,6 +9,7 @@ const Schema = mongoose.Schema;
 const weddingSchema = new Schema({
 
     name: { type: String, required: true },
+    date: { type: String, required: true },
     description: { type: String, required: true },
     pictureUrl: { type: String, required: true },
     owner: {

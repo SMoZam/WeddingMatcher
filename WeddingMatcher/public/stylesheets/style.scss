@@ -215,7 +215,7 @@ footer {
 
 input {
     height: 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     border: 1px solid #c0c0c0;
     transition: 0.4s;
 }
@@ -237,6 +237,12 @@ input[type=date] {
     margin-top: 12px;
 }
 
+input[type=number] {
+  width: 75%;
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
 ::placeholder {
     color: rgb(97, 97, 97);
     padding-left: 10px;
@@ -245,10 +251,15 @@ input[type=date] {
 input[type=email]:focus,
 input[type=password]:focus,
 input[type=text]:focus,
-input[type=date]:focus {
+input[type=date]:focus,
+input[type=number]:focus {
     outline: none;
     border: 1px solid #fc6076;
     box-shadow: 0px 0px 20px rgba(36, 37, 38, 0.13);
+}
+
+.age {
+  padding-right: 10px;
 }
 
 
@@ -275,6 +286,7 @@ input[type=date]:focus {
 
 #logged-home-page h2 {
     text-align: center;
+    margin-top: 50px;
 }
 
 #logged-home-page h3 {
@@ -286,11 +298,10 @@ input[type=date]:focus {
 }
 
 .weddings {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    height: 550px;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 2%;
 }
 
 .weddings h2 {
@@ -307,6 +318,12 @@ input[type=date]:focus {
 .own-wedding li {
     margin: 0 30px;
     box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+    transition: 0.4s;
+}
+
+.invited-wedding li:hover,
+.own-wedding li:hover {
+  transform: scale(1.04);
 }
 
 .add-wedding {
@@ -329,4 +346,40 @@ input[type=date]:focus {
     border-radius: 65px;
     padding: 6px 7px;
     background: #fd7c5f;
+}
+
+
+
+/*-------------------------- Wedding Details Page ---------------------------*/
+
+#wedding-details {
+  display: flex;
+  justify-content: center;
+}
+
+#singles-profils ul {
+  display: flex;
+}
+
+#wedding-details .text {
+  width: 660px;
+  padding-right: 70px;
+}
+
+#wedding-details h3 {
+  background: #fff;
+  padding: 15px;
+  margin: 0;
+  margin-top: -2px;
+  border-radius: 0 0 10px 10px;
+}
+
+.singles-profils li {
+  margin: 0 30px;
+  box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+  transition: 0.4s;
+}
+
+.singles-profils li:hover {
+  transform: scale(1.04);
 }

@@ -2,6 +2,7 @@
 
   <div class="text">
     <h2>{{weddingItem.name}}</h2>
+    <h5>{{weddingItem.date}}</h5>
     <p>{{weddingItem.description}}</p>
   </div>
 
@@ -20,8 +21,8 @@
       <ul>
       {{#each weddingItem.guestList}}
         <li>
-          <a href="/user/{{this._id}}"><h3>{{this.firstName}}</h3></a>
           <a href="/user/{{this._id}}"><img src="{{this.avatar}}"></a>
+          <a href="/user/{{this._id}}"><h3>{{this.firstName}}</h3></a>
         </li>
       {{else}}
         <p>No guest yet...</p>
