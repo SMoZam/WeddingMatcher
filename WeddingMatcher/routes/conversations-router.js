@@ -20,35 +20,16 @@ router.get("/conversations", (req, res, next) => {
         .populate("owners")
         .populate("messages.user")
         .then(conversationResultArray => {
-            // console.log("test avant all messages ");
-            // console.log("conv0 : ");
-            // console.log(conversationResultArray[0].messages);
-            // console.log("conv1 : ");
-            // console.log(conversationResultArray[1].messages);
-
-
-            // const allMessages = [];
-            // conversationResultArray.forEach(el => {
-            //     for (var i = 0; i < el.messages.length; i++) {
-            //         if (String(el.messages[i].user._id) == String(req.user._id)) {
-            //             allMessages.push(el.messages[i].toObject());
-            //             allMessages[i].class = "sent";
-            //             el.messages[i] = allMessages[i];
-            //         } else {
-            //             allMessages.push(el.messages[i].toObject());
-            //             allMessages[i].class = "received";
-            //             el.messages[i] = allMessages[i];
-            //         }
-            //     }
-            // });
-            // console.log("test après");
-            // console.log("conv0 : ");
-            // console.log(conversationResultArray[0].messages);
-            // console.log("conv1 : ");
-            // console.log(conversationResultArray[1].messages);
-
+            conversationResultArray.forEach(el => {
+                for (var i = 0; i < el.messages.length; i++) {
+                    if (String(el.messages[i].user._id) == String(req.user._id)) {
+                        el.messages[i].class = "sent";
+                    } else {
+                        el.messages[i].class = "received";
+                    }
+                }
+            });
             res.locals.fullConversationArray = conversationResultArray;
-            // res.locals.messagesArray = allMessages;
             res.render("conversations/conversations.hbs")
         })
         .catch(err => next(err))
