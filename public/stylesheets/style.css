@@ -121,33 +121,9 @@ footer p {
 .visibility {
   display: none; }
 
-<<<<<<< HEAD
 footer {
   position: fixed;
   bottom: 0; }
-=======
-.sent {
-  color: blue; }
-
-.received {
-  color: red;
-  text-align: right; }
->>>>>>> 4886c70db9db42e8420e63d1a4a59ed27e6f6347
-
-.big-container {
-  display: flex; }
-
-.conversation-container {
-  padding: 5%; }
-
-.picture-container {
-  padding: 5%; }
-
-.display-0 {
-  display: none; }
-
-.display-1 {
-  display: none; }
 
 /*-------------------------- Home Page ---------------------------*/
 #home-page {
@@ -304,7 +280,6 @@ input[type=number]:focus {
 .singles-profils li:hover {
   transform: scale(1.04); }
 
-<<<<<<< HEAD
 .message-user {
   display: flex;
   text-align: center; }
@@ -336,8 +311,22 @@ input[type=number]:focus {
   padding: 15px;
   margin: 0;
   margin-top: 15px;
-  border-radius: 0 0 10px 10px; }
-=======
+  border-radius: 0 0 10px 10px;
+  transform: scale(1.04); }
+
+.go-back h3 {
+  padding: 0 26%; }
+
+.big-container {
+  display: flex;
+  justify-content: center; }
+
+.conversation-container {
+  padding: 5%; }
+
+.picture-container {
+  padding: 5%; }
+
 /*-------------------------- Profil Page ---------------------------*/
 #profil-section h2 {
   margin-top: 0; }
@@ -379,7 +368,8 @@ input[type=number]:focus {
   border-radius: 10px;
   box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13); }
 
-#setting-page input[type=text], #setting-page textarea {
+#setting-page input[type=text],
+#setting-page textarea {
   width: 100%;
   margin-top: 12px; }
 
@@ -403,12 +393,13 @@ textarea:focus {
 input[type=file] {
   border: none; }
 
-#setting-page input[type=text], #setting-page input[type=number], #setting-page input[type=email] {
+#setting-page input[type=text],
+#setting-page input[type=number],
+#setting-page input[type=email] {
   margin: 12px 0;
   padding-left: 10px; }
 
 #setting-page button {
   text-align: center; }
->>>>>>> 4886c70db9db42e8420e63d1a4a59ed27e6f6347
 
 /*# sourceMappingURL=style.css.map */

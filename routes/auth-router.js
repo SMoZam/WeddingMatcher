@@ -26,6 +26,7 @@ router.post("/process-signup", (req, res, next) => {
 
 
 router.get("/login", (req, res, next) => {
+
     res.render("auth-views/login-form.hbs")
 })
 
@@ -71,6 +72,9 @@ router.get("/logout", (req, res, next) => {
 
 router.get("/logged-home", (req, res, next) => {
     // res.render("logged-home-page.hbs");
+    // In this route we do a find in the weddind document and search for the weddings where the logged user
+    // is invited or owner and then separate those weddings with two arrays: createdWeddings and myWeddings
+    //we push one wedding element into the array and then create two res.locals that we use in the hbs view
     Wedding.find({ $or: [{ guestList: ObjectId(req.user._id) }, { owner: ObjectId(req.user._id) }] })
         .sort({ createdAt: -1 }) // use ".sort()" to order results (-1 for reverse)
         .then(weddingResults => {
