@@ -73,6 +73,36 @@ router.post("/add-message/:conversationId/process-message", (req, res, next) => 
         .catch(err => next(err));
 });
 
+router.get("/add-conversation/:interlocutorId", (req, res, next) => {
+    // get the ID from the URL (it's inside of "req.params")
+    const { interlocutorId } = req.params;
+
+
+    const conversationData = {
+        owners: [ObjectId(req.user._id), ObjectId(interlocutorId)],
+    }
+
+    Conversation.find(conversationData)
+        .then(result => {
+            console.log("this is result");
+            console.log(result.length);
+            if (result.length == 0) {
+                Conversation.create(conversationData)
+                    .then(userResults => {
+                        console.log(`created ${userResults}`);
+
+                    })
+                    .catch(err => next(err));
+            }
+            res.redirect('/conversations')
+        })
+        .catch(err => next(err));
+
+
+
+});
+
+
 
 router.get("/conversations/:conversationId", (req, res, next) => {
     const { conversationId } = req.params;

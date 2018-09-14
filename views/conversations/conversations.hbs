@@ -1,19 +1,14 @@
 <div class="big-container">
 
     <div class="picture-container message-user ">
-        <ul>
-            <li><img src="{{fullConversationArray.[0].pictureUrl}}" class="trigger-0" height="440px"></li>
-            <li><a class="link-button" href="conversations/{{fullConversationArray.[0]._id}}">Open conversation</a></li>
 
-        </ul>
+
+        {{#each fullConversationArray}}
         <ul>
-            <li><img src="{{fullConversationArray.[1].pictureUrl}}" class="trigger-1" height="440px"></li>
-            <li><a class="link-button" href="conversations/{{fullConversationArray.[1]._id}}">Open conversation</a></li>
+            <li><img src="{{this.pictureUrl}}" class="trigger-0" height="440px"></li>
+            <li><a class="link-button" href="conversations/{{this._id}}">Open conversation</a></li>
         </ul>
-        <ul>
-            <li><img src="{{fullConversationArray.[2].pictureUrl}}" class="trigger-1" height="440px"></li>
-            <li><a class="link-button" href="conversations/{{fullConversationArray.[2]._id}}">Open conversation</a></li>
-        </ul>
+        {{/each}}
 
     </div>
 

@@ -48,7 +48,8 @@ header {
   padding-left: 30px; }
 
 footer {
-  position: absolute;
+  margin-top: 80px;
+  position: relative;
   bottom: 0;
   left: 0;
   text-align: right;
@@ -258,7 +259,8 @@ input[type=number]:focus {
   margin-top: 100px; }
 
 #singles-profils ul {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 #wedding-details .text {
   width: 660px;
@@ -272,11 +274,15 @@ input[type=number]:focus {
   border-radius: 0 0 10px 10px; }
 
 #singles-profils {
-  width: 1092px;
-  margin: auto; }
+  width: 1400px;
+  margin: auto;
+  margin-top: 50px; }
+
+#singles-profils h3 {
+  text-align: center; }
 
 #singles-profils li {
-  margin: 0 30px;
+  margin: 50px 30px 0;
   box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
   transition: 0.4s; }
 
@@ -331,6 +337,13 @@ input[type=number]:focus {
 
 .picture-container {
   padding: 5%; }
+
+.big-container h3 {
+  background: #fff;
+  padding: 15px;
+  margin: 0;
+  margin-top: -2px;
+  border-radius: 0 0 10px 10px; }
 
 /*-------------------------- Profil Page ---------------------------*/
 #profil-section h2 {
