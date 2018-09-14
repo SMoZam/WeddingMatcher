@@ -1,6 +1,9 @@
     body {
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
         font-family: 'Lato', sans-serif;
         font-weight: 300;
         font-size: 15px;
@@ -37,15 +40,7 @@
     }
     /*-------------------------- Header, Footer & Top Menu ---------------------------*/
     
-    // #top-menu {
-    //   color: #fff;
-    //   background: #fd7c5f;
-    //   text-align: center;
-    // height: 40px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // }
+
     .success-message, .error-message {
         color: #fff;
         background: #fd7c5f;
@@ -129,6 +124,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
+        right: 0;
         background-color: #fff;
         min-width: 160px;
         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
@@ -163,6 +159,7 @@
         justify-content: center;
         align-items: center;
         height: 800px;
+        flex-grow: 1;
     }
 
     .home-image img {
@@ -238,6 +235,7 @@
         display: flex;
         align-items: center;
         height: 600px;
+        flex-grow: 1;
     }
     
     .login-wrapper {
@@ -252,6 +250,10 @@
 
     /*-------------------------- Logged Home Page ---------------------------*/
     
+    #logged-home-page {
+        flex-grow: 1;
+    }
+
     #logged-home-page h2 {
         text-align: center;
         margin-top: 50px;
@@ -322,6 +324,7 @@
         display: flex;
         justify-content: center;
         margin-top: 100px;
+        flex-grow: 1;
     }
     
     #singles-profils ul {
@@ -371,9 +374,13 @@
     
     .message-user li {
         margin: 0 30px;
-        box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+        // box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
         transition: 0.4s;
     }
+
+    .message-user li img {
+        box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+    }    
     
     .message-user h3 {
         margin: 0;
@@ -413,6 +420,7 @@
     .big-container {
         display: flex;
         justify-content: center;
+        flex-grow: 1;
     }
     
     .conversation-container {
@@ -433,6 +441,10 @@
 
     /*-------------------------- Profil Page ---------------------------*/
     
+    #profil-section {
+        flex-grow: 1;
+    }
+
     #profil-section h2 {
         margin-top: 0;
     }
@@ -468,6 +480,7 @@
         display: flex;
         align-items: center;
         height: 600px;
+        flex-grow: 1;
     }
     
     .setting-wrapper {
@@ -530,6 +543,7 @@
     align-items: center;
     height: 600px;
     margin-top: 70px;
+    flex-grow: 1;
 }
 
 .wedding-form-wrapper {
@@ -556,6 +570,7 @@
 #error-page {
     display: flex;
     justify-content: center;
+    flex-grow: 1;
 }
 
 
