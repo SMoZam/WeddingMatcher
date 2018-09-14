@@ -1,7 +1,7 @@
 
 <section id="profil-section">
 
-  <div class="profil-wrapper">
+  <div class="profil-wrapper fade-in-bottom">
 
     <div class="image">
       <img src="{{userItem.avatar}}" height="500px"> 
@@ -11,7 +11,10 @@
       <h2>{{userItem.firstName}} {{userItem.lastName}}</h2>
       <p><b>Age - {{userItem.age}}</b></p>
       <p>{{userItem.description}}</p>
+
+      {{#if currentUser}}
       <a class="link-button" href="/settings">Edit Profil</a>
+      {{/if}}
     </div>
 
   </div>

@@ -46,7 +46,7 @@
     // align-items: center;
     // justify-content: center;
     // }
-    .success-message {
+    .success-message, .error-message {
         color: #fff;
         background: #fd7c5f;
         text-align: center;
@@ -67,8 +67,11 @@
     }
     
     footer {
-        position: fixed;
+        position: absolute;
         bottom: 0;
+        left: 0;
+        text-align: right;
+        padding: 5px;
         width: 100%;
         color: #f6f6f6;
         font-size: 13px;
@@ -76,7 +79,7 @@
     }
     
     footer p {
-        padding-left: 20px;
+        padding-right: 30px;
     }
     /*-------------------------- Navbar ---------------------------*/
     
@@ -119,30 +122,29 @@
     .navbar a:hover,
     .dropdown:hover .dropbtn,
     .dropbtn:focus {
-        color: #fc6076;
+        color: #F97D68;
     }
     
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f9f9f9;
+        background-color: #fff;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
         z-index: 1;
     }
     
     .dropdown-content a {
         float: none;
-        color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
     }
     
-    .dropdown-content a:hover {
-        background-color: #ddd;
-    }
+    // .dropdown-content a:hover {
+    //     background-color: #ddd;
+    // }
     
     .show {
         display: block;
@@ -151,13 +153,7 @@
     .visibility {
         display: none;
     }
-    
-    // <<<<<<< HEAD >>>>>>>4886c70db9db42e8420e63d1a4a59ed27e6f6347
-    footer {
-        position: fixed;
-        bottom: 0;
-    }
-    
+        
     .sent {
         color: blue;
     }
@@ -194,6 +190,10 @@
         align-items: center;
         height: 800px;
     }
+
+    .home-image img {
+        box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+    }
     
     .home-text {
         margin-left: 90px;
@@ -213,6 +213,8 @@
         border-radius: 20px;
         border: 1px solid #c0c0c0;
         transition: 0.4s;
+        padding-left: 10px;
+
     }
     
     .radio-option {
@@ -240,7 +242,7 @@
     
      ::placeholder {
         color: rgb(97, 97, 97);
-        padding-left: 10px;
+        // padding-left: 5px;
     }
     
     input[type=email]:focus,
@@ -273,6 +275,7 @@
         border-radius: 10px;
         box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
     }
+
     /*-------------------------- Logged Home Page ---------------------------*/
     
     #logged-home-page h2 {
@@ -338,11 +341,13 @@
         padding: 6px 7px;
         background: #fd7c5f;
     }
+
     /*-------------------------- Wedding Details Page ---------------------------*/
     
     #wedding-details {
         display: flex;
         justify-content: center;
+        margin-top: 100px;
     }
     
     #singles-profils ul {
@@ -361,16 +366,22 @@
         margin-top: -2px;
         border-radius: 0 0 10px 10px;
     }
+
+    #singles-profils {
+        width: 1092px;
+        margin: auto;
+    }
     
-    .singles-profils li {
+    #singles-profils li {
         margin: 0 30px;
         box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
         transition: 0.4s;
     }
     
-    .singles-profils li:hover {
+    #singles-profils li:hover {
         transform: scale(1.04);
     }
+
     
     // ---------------MESSAGES--------------------
     .message-user {
@@ -454,6 +465,7 @@
     .setting-wrapper {
         width: 420px;
         margin: auto;
+        margin-top: 50px;
         padding: 30px 50px 60px;
         border: 1px solid #f4f4f4;
         background: #fff;
@@ -499,5 +511,165 @@
     }
     
     #setting-page button {
-        text-align: center;
+        margin: 20px 70px 0;
     }
+
+
+/*-------------------------- Wedding Setting Page ---------------------------*/    
+
+#wedding-form-section {
+    display: flex;
+    align-items: center;
+    height: 600px;
+    margin-top: 70px;
+}
+
+.wedding-form-wrapper {
+    width: 420px;
+    margin: auto;
+    padding: 30px 50px 60px;
+    border: 1px solid #f4f4f4;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+}
+
+#wedding-form-section input[type=text],
+#wedding-form-section input[type=url],
+#wedding-form-section textarea {
+    width: 100%;
+    margin: 12px 0;
+    padding-left: 10px;
+}
+
+
+/*-------------------------- Wedding Setting Page ---------------------------*/    
+
+#error-page {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*-------------------------- Animation ---------------------------*/    
+
+.fade-in-left {
+	-webkit-animation: fade-in-left 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-left 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-right {
+	-webkit-animation: fade-in-right 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-right 0.9s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in {
+	-webkit-animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+/**
+ * ----------------------------------------
+ * animation fade-in-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in-left {
+    0% {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-left {
+    0% {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@-webkit-keyframes fade-in-right {
+    0% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-right {
+    0% {
+      -webkit-transform: translateX(50px);
+              transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+@-webkit-keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
