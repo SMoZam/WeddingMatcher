@@ -423,6 +423,23 @@
         border-radius: 0 0 10px 10px;
         transform: scale(1.04);
     }
+    
+    .go-back h3 {
+        padding: 0 26%;
+    }
+    
+    .big-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .conversation-container {
+        padding: 5%;
+    }
+    
+    .picture-container {
+        padding: 5%;
+    }
     /*-------------------------- Profil Page ---------------------------*/
     
     #profil-section h2 {

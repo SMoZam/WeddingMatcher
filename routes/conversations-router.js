@@ -21,6 +21,15 @@ router.get("/conversations", (req, res, next) => {
         .populate("messages.user")
         .then(conversationResultArray => {
             conversationResultArray.forEach(el => {
+
+                if (String(el.owners[0]._id) == String(req.user._id)) {
+                    el.pictureUrl = el.owners[1].avatar;
+
+                } else {
+                    el.pictureUrl = el.owners[0].avatar;
+                }
+
+
                 for (var i = 0; i < el.messages.length; i++) {
                     if (String(el.messages[i].user._id) == String(req.user._id)) {
                         el.messages[i].class = "sent";
@@ -29,6 +38,10 @@ router.get("/conversations", (req, res, next) => {
                     }
                 }
             });
+
+
+
+
             res.locals.fullConversationArray = conversationResultArray;
             res.render("conversations/conversations.hbs")
         })
@@ -77,6 +90,14 @@ router.get("/conversations/:conversationId", (req, res, next) => {
                     conversationResultArray.messages[i].class = "received";
                 }
             };
+
+            if (String(conversationResultArray.owners[0]._id) == String(req.user._id)) {
+                conversationResultArray.pictureUrl = conversationResultArray.owners[1].avatar;
+
+            } else {
+                conversationResultArray.pictureUrl = conversationResultArray.owners[0].avatar;
+            }
+
             res.locals.oneConversationArray = conversationResultArray;
             res.render("conversations/one-conversation.hbs")
         })

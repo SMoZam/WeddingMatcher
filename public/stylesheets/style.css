@@ -120,6 +120,7 @@ footer p {
 .visibility {
   display: none; }
 
+<<<<<<< HEAD
 .sent {
   color: blue; }
 
@@ -141,6 +142,11 @@ footer p {
 
 .display-1 {
   display: none; }
+=======
+footer {
+  position: fixed;
+  bottom: 0; }
+>>>>>>> a9b52f07f1e251ad93e8927279fc44537495089c
 
 /*-------------------------- Home Page ---------------------------*/
 #home-page {
@@ -339,6 +345,22 @@ input[type=number]:focus {
   border-radius: 0 0 10px 10px;
   transform: scale(1.04); }
 
+<<<<<<< HEAD
+=======
+.go-back h3 {
+  padding: 0 26%; }
+
+.big-container {
+  display: flex;
+  justify-content: center; }
+
+.conversation-container {
+  padding: 5%; }
+
+.picture-container {
+  padding: 5%; }
+
+>>>>>>> a9b52f07f1e251ad93e8927279fc44537495089c
 /*-------------------------- Profil Page ---------------------------*/
 #profil-section h2 {
   margin-top: 0; }
@@ -413,6 +435,7 @@ input[type=file] {
   padding-left: 10px; }
 
 #setting-page button {
+<<<<<<< HEAD
   margin: 20px 70px 0; }
 
 /*-------------------------- Wedding Setting Page ---------------------------*/
@@ -536,5 +559,8 @@ input[type=file] {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
+=======
+  text-align: center; }
+>>>>>>> a9b52f07f1e251ad93e8927279fc44537495089c
 
 /*# sourceMappingURL=style.css.map */
