@@ -1,22 +1,25 @@
-<h2>Your Wedding</h2>
 
-{{!-- {{> flash_messages}} --}}
+<section id="wedding-details">
 
-<a href="/wedding/add">Add a Wedding</a>
+{{#each weddingArray}}
 
-<ul>
- {{#each weddingArray}}
- <li>
-   <h3>{{this.name}}</h3>
-   <p>{{this.description}}</p>
-   <img src="{{this.pictureUrl}}">
- </li> 
+  <div class="text">
+    <h2>{{this.name}}</h2>
+    <h5><i class="far fa-clock"></i> {{this.date}}</h5>
+    <p>{{{this.description}}}</p>
+  </div>
+
+  <div class="image">
+    <img src="{{this.pictureUrl}}" height="500px">
+  </div>
+
  {{else}}
  <p>You don't have any wedding yet.</p>
- <a href="/wedding/add">Add Your First Wedding</a>
  {{/each}}
-</ul>
 
+</section>
+
+{{!-- 
 <ul>
  {{#each weddingListArray}}
  <li>
@@ -28,7 +31,7 @@
  <p>You're not invited to a wedding yet </p>
  <a href="/wedding/add">Add Your First Wedding</a>
  {{/each}}
-</ul>
+</ul> --}}
 
 
-{{weddingListArray.name}}
+{{!-- {{weddingListArray.name}} --}}

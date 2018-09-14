@@ -1,14 +1,14 @@
 <section id="logged-home-page">
 
-    <h2>Hello {{currentUser.firstName}}!</h2>
+    <h2 class="fade-in">Hello {{currentUser.firstName}}!</h2>
 
     <div class="weddings">
-        <div class="own-wedding">
+        <div class="own-wedding fade-in-left">
             <h2>Your Wedding </h2>
             <ul>
                 {{#each weddingArray}}
                 <li>
-                    <a href="/wedding/{{this._id}}"><img src="{{this.pictureUrl}}"></a>
+                    <a href="/wedding/{{this._id}}"><img src="{{this.pictureUrl}}" height="340px"></a>
                     <a href="/wedding/{{this._id}}"><h3>{{this.name}}</h3></a>
                 </li>
                 {{else}}
@@ -18,12 +18,12 @@
             {{/each}}
         </div>
 
-        <div class="invited-wedding">
+        <div class="invited-wedding fade-in-right">
             <h2>Weddings where you're invited</h2>
             <ul>
                 {{#each weddingListArray}}
                 <li>
-                    <a href="/wedding/{{this._id}}"><img src="{{this.pictureUrl}}"></a>
+                    <a href="/wedding/{{this._id}}"><img src="{{this.pictureUrl}}" height="340px"></a>
                     <a href="/wedding/{{this._id}}"><h3>{{this.name}}</h3></a>
                 </li>
                 {{else}}

@@ -2,12 +2,12 @@
 
   <div class="text">
     <h2>{{weddingItem.name}}</h2>
-    <h5>{{weddingItem.date}}</h5>
-    <p>{{weddingItem.description}}</p>
+    <h5><i class="far fa-clock"></i> {{weddingItem.date}}</h5>
+    <p>{{{weddingItem.description}}}</p>
   </div>
 
   <div class="image">
-    <img src="{{weddingItem.pictureUrl}}">
+    <img src="{{weddingItem.pictureUrl}}" height="500px">
   </div>
 
 </section>
@@ -18,10 +18,12 @@
     
     {{#if currentUser.isSingle}}
 
+      <h2>The Singles Guestlist</h2>
+
       <ul>
       {{#each weddingItem.guestList}}
         <li>
-          <a href="/user/{{this._id}}"><img src="{{this.avatar}}"></a>
+          <a href="/user/{{this._id}}"><img src="{{this.avatar}}" height="340px"></a>
           <a href="/user/{{this._id}}"><h3>{{this.firstName}}</h3></a>
         </li>
       {{else}}
