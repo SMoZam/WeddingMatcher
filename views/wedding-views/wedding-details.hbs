@@ -7,7 +7,7 @@
   </div>
 
   <div class="image">
-    <img src="{{weddingItem.pictureUrl}}" height="400px">
+    <img src="{{weddingItem.pictureUrl}}" height="500px">
   </div>
 
 </section>
@@ -21,7 +21,7 @@
       <ul>
       {{#each weddingItem.guestList}}
         <li>
-          <a href="/user/{{this._id}}"><img src="{{this.avatar}}"></a>
+          <a href="/user/{{this._id}}"><img src="{{this.avatar}}" height="340px"></a>
           <a href="/user/{{this._id}}"><h3>{{this.firstName}}</h3></a>
         </li>
       {{else}}
