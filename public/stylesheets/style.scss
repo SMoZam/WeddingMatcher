@@ -397,7 +397,7 @@
         padding: 15px;
         margin: 0;
         margin-top: 15px;
-        border-radius: 0 0 10px 10px;
+        border-radius: 10px 0 10px 10px;
         text-align: right;
         margin-left: 90px;
     }
@@ -408,7 +408,7 @@
         padding: 15px;
         margin: 0;
         margin-top: 15px;
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 10px 10px 10px;
         transform: scale(1.04);
         margin-right: 90px;
     }
@@ -424,7 +424,8 @@
     }
     
     .conversation-container {
-        padding: 5%;
+        padding: 50px;
+        height: 410px;
     }
     
     .picture-container {
@@ -437,6 +438,20 @@
         margin: 0;
         margin-top: -2px;
         border-radius: 0 0 10px 10px;
+    }
+
+    .picture-container li img {
+        margin: 0 30px;
+        box-shadow: 1px 2px 20px rgba(36, 37, 38, 0.13);
+        transition: 0.4s;
+    }
+
+    .picture-container li {
+        transition: 0.4s;
+    }
+
+    .picture-container li:hover {
+        transform: scale(1.04);
     }
 
     /*-------------------------- Profil Page ---------------------------*/
